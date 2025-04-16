@@ -155,6 +155,68 @@ body.home {
     text-align: center;
     width: 25%;
 }
+/**Contact Page**/
+.container {
+    max-width: 1200px;
+    margin:auto;   
+}
+.area {
+    display: grid;
+    grid-template-columns: 20% auto; 
+    align-items: center;   
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-right: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.full-width {
+    grid-column: span 2;
+}
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.inline-field label {
+    font-weight: 400;
+}
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #d1d1d1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea, select[multiple] {
+    min-height: 65px;
+}
+input[type="text"]:required, input[type="tel"]:required, input[type="email"]:required {
+    border-color: red;
+}
+input[type="text"]:valid, input[type="tel"]:valid, input[type="email"]:valid {
+    border-color: green;
+}
+input[type="submit"] {
+    padding: 0 30px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    background-color: transparent;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-bottom: 10px;
+}
+input[type="submit"]:hover {
+    background-color: lightgray;
+}
 /**About Page**/
 .about .container {
     max-width: 900px;
@@ -377,5 +439,20 @@ footer img {
     } 
     .contact {
         text-align: center;
+    }
+    .area {
+        grid-template-columns: 1fr;
+    }
+    form {
+        display: block;
+    }
+    .form-group {
+        margin: 20px 20px 20px 40px;
+    }
+    input[type="submit"] {
+        margin-left: 40px;
+    }
+    .fix {
+        margin: 10px 5px 0 40px;
     }
 }
